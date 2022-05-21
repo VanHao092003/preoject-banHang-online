@@ -218,7 +218,7 @@ button {
 .header_section{
 	width: 100%;
 	float: left;
-  	background-image: url('/banHang/views/images/banner.png');
+  	background-image: url('/WebSellingShoes/views/images/banner.png');
   	height: auto;
 	padding: 20px 0px;
 	background-size: 100%;
@@ -448,7 +448,7 @@ body{
 .about-img2{
 	width: 100%;
 	float: left;
-	background-image:  url('/banHang/views/images/about-img2.png');
+	background-image:  url('/WebSellingShoes/views/images/about-img2.png');
 	height: auto;
 	box-shadow: 0px 0px 10px 0px;
 	margin-left: -50px;
@@ -656,7 +656,7 @@ a:hover {
 .shop_banner{
 	width: 100%;
 	float: left;
-	background-image: url('/banHang/views/images/shop-banner.png');
+	background-image: url('/WebSellingShoes/views/images/shop-banner.png');
 	height: auto;
 	padding: 70px;
 }
