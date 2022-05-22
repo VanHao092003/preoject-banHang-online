@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-sm-3">
                     <div class="logo">
-                        <a href='<c:url value ="home"/>'><img src='<c:url value = "/views/images/logo.png"/>'></a>
+                        <a href='<c:url value ="/home"/>'><img src='<c:url value = "/views/images/logo.png"/>'></a>
                     </div>
                 </div>
                 <div class="col-sm-9">
@@ -15,7 +15,7 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
-                                <a class="nav-item nav-link" href='<c:url value="index"/>'>Home</a>
+                                <a class="nav-item nav-link" href='<c:url value="home"/>'>Home</a>
                                 <a class="nav-item nav-link" href='<c:url value="collection"/>'>Collection</a>
                                 <a class="nav-item nav-link" href='<c:url value="shoes"/>'>Shoes</a>
                                 <a class="nav-item nav-link" href='<c:url value="racing boots"/>'>Racing Boots</a>

@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @org.springframework.stereotype.Controller
 public class Controller {
 	
-	@RequestMapping(value = "/index")
+	@RequestMapping(value = "/home")
 	public String home(HttpServletRequest httpServletRequest) {
-		return "index";
+		return "home";
 	}
 	
 	@RequestMapping(value = "/collection", method =  RequestMethod.GET)
