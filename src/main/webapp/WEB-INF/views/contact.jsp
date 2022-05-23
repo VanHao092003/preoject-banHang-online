@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +28,28 @@
                     <div class="email_box">
                         <div class="input_main">
                             <div class="container">
-                                <form action="/action_page.php">
+                            	<c:url value="/contact" var="url" />
+                            	<form:form action="${url }" method="POST" modelAttribute="contact" enctype="multipart/form-data">
+                            		<div class="form-group">
+                            			<form:hidden path="ID"/>
+                            		</div>
+                            		<div class="form-group">
+                            			<form:input class="email-bt" path="name" placeholder="Name"/>
+                            		</div>
+                            		<div class="form-group">
+                            			<form:input class="email-bt" path="phone" placeholder="Phone"/>
+                            		</div>
+                            		<div class="form-group">
+                            			<form:input class="email-bt" path="email" placeholder="Email"/>
+                            		</div>
+                            		<div class="form-group">
+                            			<form:textarea class="email-bt" path="massage" placeholder="Masage"/>
+                            		</div>
+                            		<div class="send_btn">
+                                		<form:button class="main_bt" value="sumbit">Send</form:button>
+                            		</div>
+                            	</form:form>
+                                <%-- <form action="/action_page.php">
                                     <div class="form-group">
                                         <input type="text" class="email-bt" placeholder="Name" name="Name">
                                     </div>
@@ -40,11 +63,11 @@
                                     <div class="form-group">
                                         <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
                                     </div>
-                                </form>
+                                </form> --%>
                             </div>
-                            <div class="send_btn">
+                           <!--  <div class="send_btn">
                                 <button class="main_bt">Send</button>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

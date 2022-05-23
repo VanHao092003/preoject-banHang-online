@@ -1,8 +1,12 @@
 package com.WebSellingShoes.DAO;
 
-import org.springframework.stereotype.Repository;
+import java.util.List;
 
-@Repository
+import com.WebSellingShoes.model.ContactNow;
+import com.WebSellingShoes.model.Shoes;
+
 public interface DAO {
-
+	public void contactNow(ContactNow contactNow);
+	public List<Shoes> showShoes();
+	public Shoes detail(int ID);
 }

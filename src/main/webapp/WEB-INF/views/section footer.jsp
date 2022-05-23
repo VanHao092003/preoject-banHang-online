@@ -20,16 +20,16 @@
                         <div class="social_icon">
                             <ul>
                                 <li>
-                                    <a href="#"><img src='<c:url value = "/views/images/fb-icon.png"/>'></a>
+                                    <a href= "https://www.facebook.com/profile.php?id=100014167864051"><img src='<c:url value = "/views/images/fb-icon.png"/>'></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src='<c:url value = "/views/images/twitter-icon.png"/>'></a>
+                                    <a href="https://twitter.com/?lang=vi"><img src='<c:url value = "/views/images/twitter-icon.png"/>'></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src='<c:url value = "/views/images/in-icon.png"/>'></a>
+                                    <a href="https://www.instagram.com/"><img src='<c:url value = "/views/images/in-icon.png"/>'></a>
                                 </li>
                                 <li>
-                                    <a href="#"><img src='<c:url value = "/views/images/google-icon.png"/>'></a>
+                                    <a href="https://www.google.com.vn/?hl=vi"><img src='<c:url value = "/views/images/google-icon.png"/>'></a>
                                 </li>
                             </ul>
                         </div>
