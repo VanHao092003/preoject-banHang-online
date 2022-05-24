@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -22,6 +23,10 @@ public class Controller {
 	
 	@RequestMapping(value = "/home")
 	public String home(HttpServletRequest httpServletRequest) {
+		Shoes shoesMax = service.showShoesMax();
+		httpServletRequest.setAttribute("shoesMax", shoesMax);
+		List<Shoes> shoesHome = service.showShoesHome();
+		httpServletRequest.setAttribute("shoesHome", shoesHome);
 		List<Shoes> shoess = service.showShoes();
 		httpServletRequest.setAttribute("shoessHome", shoess);
 		return "home";
@@ -60,6 +65,12 @@ public class Controller {
 		return "racing boots";
 	}
 	
+	@RequestMapping(value = "/{ID}", method = RequestMethod.GET)
+	public String detail(HttpServletRequest httpServletRequest, @PathVariable("ID") int ID) {
+		Shoes shoes = service.detail(ID);
+		httpServletRequest.setAttribute("shoesDetail", shoes);
+		return "detail";
+	}
 	
 	
 }

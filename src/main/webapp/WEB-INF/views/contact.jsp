@@ -29,7 +29,7 @@
                         <div class="input_main">
                             <div class="container">
                             	<c:url value="/contact" var="url" />
-                            	<form:form action="${url }" method="POST" modelAttribute="contact" enctype="multipart/form-data">
+                            	<form:form class="form" action="${url }" method="POST" modelAttribute="contact" enctype="multipart/form-data">
                             		<div class="form-group">
                             			<form:hidden path="ID"/>
                             		</div>
@@ -42,32 +42,14 @@
                             		<div class="form-group">
                             			<form:input class="email-bt" path="email" placeholder="Email"/>
                             		</div>
-                            		<div class="form-group">
+                            		<div class="form-group textarea_bt">
                             			<form:textarea class="email-bt" path="massage" placeholder="Masage"/>
                             		</div>
                             		<div class="send_btn">
                                 		<form:button class="main_bt" value="sumbit">Send</form:button>
                             		</div>
                             	</form:form>
-                                <%-- <form action="/action_page.php">
-                                    <div class="form-group">
-                                        <input type="text" class="email-bt" placeholder="Name" name="Name">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="email-bt" placeholder="Phone Numbar" name="Name">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="email-bt" placeholder="Email" name="Email">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
-                                    </div>
-                                </form> --%>
                             </div>
-                           <!--  <div class="send_btn">
-                                <button class="main_bt">Send</button>
-                            </div> -->
                         </div>
                     </div>
                 </div>

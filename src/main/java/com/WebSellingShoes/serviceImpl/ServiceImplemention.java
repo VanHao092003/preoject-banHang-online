@@ -30,4 +30,14 @@ public class ServiceImplemention implements Service{
 		return dao.detail(ID);
 	}
 
+	@Override
+	public List<Shoes> showShoesHome() {
+		return dao.showShoesHome();
+	}
+
+	@Override
+	public Shoes showShoesMax() {
+		return dao.showShoesMax();
+	}
+
 }

@@ -9,4 +9,6 @@ public interface DAO {
 	public void contactNow(ContactNow contactNow);
 	public List<Shoes> showShoes();
 	public Shoes detail(int ID);
+	public List<Shoes> showShoesHome();
+	public Shoes showShoesMax();
 }

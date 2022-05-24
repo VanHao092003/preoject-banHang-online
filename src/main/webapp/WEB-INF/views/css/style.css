@@ -220,6 +220,10 @@ button {
 	display: flex;
 }
 
+.col-sm-4{
+	display: block;
+}
+
 .header_section{
 	width: 100%;
 	float: left;
@@ -284,14 +288,7 @@ button {
 	float: left;
 	font-size: 39pt;
 	color: #fdfcfc;
-	line-height: 40px;
-}
-.lorem_text{
-	width: 100%;
-	float: left;
-	font-size: 13pt;
-	color: #fefefe;
-	margin-left: 0px;
+	line-height: 56px;
 }
 
 .buy_bt{ 
@@ -301,6 +298,7 @@ button {
 	background-color: #ff4e5b;
 	color: #ffffff;
 	font-size: 16pt;
+	justify-content: center;
  }
 
  .more_bt{
@@ -317,6 +315,7 @@ button {
 	width: 100%;
 	float: left;
 	margin-top: 85px;
+	display: block;
 }
 
 body{
@@ -559,19 +558,22 @@ body{
     float: left;
     background-color: #ffffff;
     height: auto;
-    padding: 20px 20px 20px 0px;
+    padding: 0 5px 0 5px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
 .best_text{
 	width: 100%;
+	height:96px;
 	float: left;
 	font-size: 14pt;
 	color: #000;
 	text-align: center;
     margin-left: 0px;
+    margin-bottom: 0px;
 }
+
 .shoes_icon{
 	width: 100%;
 	float: left;
@@ -610,6 +612,11 @@ body{
 	margin: auto;
 }
 
+.form{
+	flex: 1;
+}
+
+
 .contact_section{
 	width: 100%;
 	float: left;
@@ -624,6 +631,7 @@ body{
 }
 .form-group {
     margin-bottom: 2rem;
+    flex: 1;
 }
 
 .email-bt {
@@ -633,6 +641,7 @@ body{
     height: 55px;
     font-size: 22px;
     padding: 20px;
+    flex: 1;
 }
 
 .massage-bt {

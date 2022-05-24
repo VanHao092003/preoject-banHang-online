@@ -26,36 +26,38 @@
     <div class="layout_padding gallery_section">
         <div class="container">
         	<c:forEach items="${shoess}" var="o">
-                <div  class="col-sm-4">
-                    <div class="best_shoes">
-                        <p class="best_text">${o.name}</p>
-                        <div class="shoes_icon"><img src="${o.image}"></div>
-                        <div class="star_text">
-                            <div class="left_part">
-                                <ul>
-                                    <li>
-                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="right_part">
-                                <div class="shoes_price"><span style="color: #ff4e5b;">$ ${o.money}</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        		<a href='<c:url value="${o.ID}"/>'>
+	                <div  class="col-sm-4">
+	                    <div class="best_shoes">
+	                        <p class="best_text">${o.name}</p>
+	                        <div class="shoes_icon"><img src='<c:url value= "/views/images/${o.image}"/>'></div>
+	                        <div class="star_text">
+	                            <div class="left_part">
+	                                <ul>
+	                                    <li>
+	                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
+	                                    </li>
+	                                    <li>
+	                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
+	                                    </li>
+	                                    <li>
+	                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
+	                                    </li>
+	                                    <li>
+	                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
+	                                    </li>
+	                                    <li>
+	                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
+	                                    </li>
+	                                </ul>
+	                            </div>
+	                            <div class="right_part">
+	                                <div class="shoes_price"><span style="color: #ff4e5b;">$ ${o.money}</span></div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	          	</a>
         	</c:forEach>
         </div>
     </div>

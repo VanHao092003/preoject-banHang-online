@@ -31,7 +31,20 @@ public class DAOImplemention implements DAO{
 	@Override
 	public Shoes detail(int ID) {
 		String sql = "select * from shoes where ID = " + ID;
-		return (Shoes) jdbcTemplate.query(sql, new Rowmapping());
+		return jdbcTemplate.queryForObject(sql, new Rowmapping());
+	}
+
+	@Override
+	public List<Shoes> showShoesHome() {
+		String sql = "select * from shoes where ID < 13000 and ID > 200";
+		return jdbcTemplate.query(sql,new Rowmapping());
+	}
+
+	@Override
+	public Shoes showShoesMax() {
+		String sql = "select * from shoes where ID = (select min(ID) from shoes)";
+		Shoes shoes = jdbcTemplate.queryForObject(sql, new Rowmapping());
+		return shoes;
 	}
 	
 	
