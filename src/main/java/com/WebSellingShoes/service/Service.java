@@ -19,4 +19,6 @@ public interface Service {
 	public List<Boot> showAllBoot();
 	public Boot showBootMin();
 	public Boot ShowBootByID(int ID);
+	public Boot showBootMax();
+	public Shoes showShoesMax();
 }

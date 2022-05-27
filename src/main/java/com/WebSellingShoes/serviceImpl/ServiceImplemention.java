@@ -68,4 +68,15 @@ public class ServiceImplemention implements Service{
 		return dao.showBootByID(ID);
 	}
 
+	@Override
+	public Boot showBootMax() {
+		return dao.showBootMax();
+	}
+
+	@Override
+	public Shoes showShoesMax() {
+		// TODO Auto-generated method stub
+		return dao.showShoesMax();
+	}
+
 }

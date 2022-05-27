@@ -41,12 +41,12 @@
 					<div class="col-sm-5">
 						<div class="banner_taital">
 							<h1 class="banner_text">New Shoes </h1>
-							<h1 class="mens_text"><strong>${shoesMax.name}</strong></h1>
-							<a class = "link_bt" href='<c:url value="shoes/${shoesMax.ID}"/>'><button class="buy_bt">See More</button></a>
+							<h1 class="mens_text"><strong>${shoesMin.name}</strong></h1>
+							<a class = "link_bt" href='<c:url value="shoes/${shoesMin.ID}"/>'><button class="buy_bt">See More</button></a>
 						</div>
 					</div>
 						<div class="col-sm-5">
-							<div class="shoes_img"><img src='<c:url value="/views/images/${shoesMax.image}"/>'></div>
+							<div class="shoes_img"><img src='<c:url value="/views/images/${shoesMin.image}"/>'></div>
 						</div>
 					</div>
                 </div>
@@ -109,16 +109,16 @@
     	    		<div class="col-md-6">
     	    			<div class="about-img">
     	    				<button class="new_bt">New</button>
-    	    				<div class="shoes-img"><img src="images/shoes-img1.png"></div>
+    	    				<div class="shoes-img"><img src='<c:url value="/views/images/${shoesMax.image}"/>'></div>
     	    				<p class="sport_text">Men Sports</p>
-    	    				<div class="dolar_text">$<strong style="color: #f12a47;">90</strong> </div>
+    	    				<div class="dolar_text"><strong style="color: #f12a47;">${shoesMax.money} Đ</strong> </div>
     	    				<div class="star_icon">
     	    					<ul>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
+    	    						<li><a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a></li>
+    	    						<li><a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a></li>
+    	    						<li><a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a></li>
+    	    						<li><a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a></li>
+    	    						<li><a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a></li>
     	    					</ul>
     	    				</div>
     	    			</div>
@@ -126,16 +126,16 @@
     	    		</div>
     	    		<div class="col-md-6">
     	    			<div class="about-img2">
-    	    				<div class="shoes-img2"><img src="images/shoes-img2.png"></div>
+    	    				<div class="shoes-img2"><img src='<c:url value="/views/images/${bootMax.image}"/>'></div>
     	    				<p class="sport_text">Men Sports</p>
-    	    				<div class="dolar_text">$<strong style="color: #f12a47;">90</strong> </div>
+    	    				<div class="dolar_text"><strong style="color: #f12a47;">${bootMax.money} Đ</strong> </div>
     	    				<div class="star_icon">
     	    					<ul>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
-    	    						<li><a href="#"><img src="images/star-icon.png"></a></li>
+    	    						<li><a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a></li>
+    	    						<li><a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a></li>
+    	    						<li><a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a></li>
+    	    						<li><a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a></li>
+    	    						<li><a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a></li>
     	    					</ul>
     	    				</div>
     	    			</div>
@@ -150,22 +150,24 @@
     	    <p class="consectetur_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
     	</div>
     </div>
-    <div class="collectipn_section_3 layuot_padding">
-    	<div class="container">
-    		<div class="racing_shoes">
-    			<div class="row">
-    				<div class="col-md-8">
-    					<div class="shoes-img3"><img src="images/shoes-img3.png"></div>
-    				</div>
-    				<div class="col-md-4">
-    					<div class="sale_text"><strong>Sale <br><span style="color: #0a0506;">JOGING</span> <br>SHOES</strong></div>
-    					<div class="number_text"><strong>$ <span style="color: #0a0506">100</span></strong></div>
-    					<button class="seemore">See More</button>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    </div>
+        <div class="collectipn_section_3 layout_padding">
+            <div class="container">
+                <div class="racing_shoes">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="shoes-img3"><img src='<c:url value="/views/images/${bootMin.image }"/>'></div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="sale_text"><strong>Sale <br><span style="color: #0a0506;">JOGING</span>
+										<br>SHOES</strong></div>
+							<div class="original_price" > 6.000.000 Đ</div>
+                            <div class="number_text"><strong><span style="color: #0a0506">${bootMin.money} Đ</span></strong></div>
+                            <button class="seemore">See More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     <div class="collection_section layout_padding">
     	<div class="container">
     		<h1 class="new_text"><strong>New Arrivals Products</strong></h1>
@@ -178,6 +180,40 @@
     	<div class="container">
     		<c:forEach items="${shoessHome}" var="o">
                 <a href='<c:url value="shoes/${o.ID}"/>'>
+	                <div  class="col-sm-4">
+	                    <div class="best_shoes">
+	                        <p class="best_text">${o.name}</p>
+	                        <div class="shoes_icon"><img src='<c:url value= "/views/images/${o.image}"/>'></div>
+	                        <div class="star_text">
+	                            <div class="left_part">
+	                                <ul>
+	                                    <li>
+	                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
+	                                    </li>
+	                                    <li>
+	                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
+	                                    </li>
+	                                    <li>
+	                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
+	                                    </li>
+	                                    <li>
+	                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
+	                                    </li>
+	                                    <li>
+	                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
+	                                    </li>
+	                                </ul>
+	                            </div>
+	                            <div class="right_part">
+	                                <div class="shoes_price"><span style="color: #ff4e5b;">$ ${o.money}</span></div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	          	</a>
+        	</c:forEach>
+        	<c:forEach items="${bootsHome}" var="o">
+                <a href='<c:url value="boot/detail/${o.ID}"/>'>
 	                <div  class="col-sm-4">
 	                    <div class="best_shoes">
 	                        <p class="best_text">${o.name}</p>

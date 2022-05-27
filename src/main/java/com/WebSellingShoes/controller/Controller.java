@@ -25,19 +25,29 @@ public class Controller {
 	
 	@RequestMapping(value = "/home")
 	public String home(HttpServletRequest httpServletRequest) {
-		Shoes shoesMax = service.showShoesMin();
-		httpServletRequest.setAttribute("shoesMax", shoesMax);
+		Shoes shoesMin = service.showShoesMin();
+		httpServletRequest.setAttribute("shoesMin", shoesMin);
 		List<Shoes> shoesHome = service.showShoesHome();
 		httpServletRequest.setAttribute("shoesHome", shoesHome);
 		List<Shoes> shoess = service.showShoes();
 		httpServletRequest.setAttribute("shoessHome", shoess);
+		List<Boot> boots = service.showAllBoot();
+		httpServletRequest.setAttribute("bootsHome", boots);
 		Boot boot = service.showBootMin();
 		httpServletRequest.setAttribute("bootMin", boot);
+		Boot bootmax = service.showBootMax();
+		httpServletRequest.setAttribute("bootMax", bootmax);
+		Shoes shoesMax = service.showShoesMax();
+		httpServletRequest.setAttribute("shoesMax", shoesMax);
 		return "home";
 	}
 	
 	@RequestMapping(value = "/collection", method =  RequestMethod.GET)
 	public String collection(HttpServletRequest httpServletRequest) {
+		Boot bootmax = service.showBootMax();
+		httpServletRequest.setAttribute("bootMax", bootmax);
+		Shoes shoesMax = service.showShoesMax();
+		httpServletRequest.setAttribute("shoesMax", shoesMax);
 		return "collection";
 	}
 	

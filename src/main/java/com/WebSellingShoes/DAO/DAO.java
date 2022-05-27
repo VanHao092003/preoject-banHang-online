@@ -19,4 +19,6 @@ public interface DAO {
 	public List<Boot> showAllBoot();
 	public Boot showBootMin();
 	public Boot showBootByID(int ID);
+	public Boot showBootMax();
+	public Shoes showShoesMax();
 }

@@ -80,6 +80,18 @@ public class DAOImplemention implements DAO{
 		String sql = "select * from boot where ID = " + ID;
 		return jdbcTemplate.queryForObject(sql, new RowmappingBoot());
 	}
+
+	@Override
+	public Boot showBootMax() {
+		String sql = "select * from boot where ID = (select max(ID) from boot)";
+		return jdbcTemplate.queryForObject(sql, new RowmappingBoot());
+	}
+
+	@Override
+	public Shoes showShoesMax() {
+		String sql = "select * from shoes where ID = (select max(ID) from shoes)";
+		return jdbcTemplate.queryForObject(sql, new Rowmapping());
+	}
 	
 	
 	
