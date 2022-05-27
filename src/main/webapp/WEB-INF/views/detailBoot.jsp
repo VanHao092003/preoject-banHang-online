@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +20,7 @@
 		<jsp:include page="header section start.jsp"></jsp:include>
     </div>
     <!-- New Arrivals section start -->
-    <div class="collection_text">Detail</div>
+    <div class="collection_text">Chi tiết sản phẩm</div>
     <div class="super_container">
         <div class="hamburger_menu">
             <div class="hamburger_close"><i class="fa fa-times" aria-hidden="true"></i></div>
@@ -75,7 +77,7 @@
                         <div class="row">
                             <div class="col-lg-9 image_col order-lg-2 order-1">
                                 <div class="single_product_image">
-                                    <div class="single_product_image_background" style="background-image:url(/WebSellingShoes/views/images/${shoesDetail.image})"></div>
+                                    <div class="single_product_image_background" style="background-image:url(/WebSellingShoes/views/images/${bootID.image})"></div>
                                 </div>
                             </div>
                         </div>
@@ -84,40 +86,40 @@
                 <div class="col-lg-5">
                     <div class="product_details">
                         <div class="product_details_title">
-                            <h2>Pocket cotton sweatshirt</h2>
-                            <p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut...</p>
+                            <h2>${bootID.title}</h2>
+                            <p>${bootID.discription}</p>
                         </div>
                         <div class="free_delivery d-flex flex-row align-items-center
 								justify-content-center">
-                            <span class="ti-truck"></span><span>free delivery</span>
+                            <span class="ti-truck"></span><span>miễn phí vận chuyển</span>
                         </div>
-                        <div class="product_price">${shoesDetail.money} Đ</div>
+                        <div class="product_price">${bootID.money} Đ</div>
                         <ul class="star_rating">
                             <li><i class="fa fa-star" aria-hidden="true"></i></li>
                             <li><i class="fa fa-star" aria-hidden="true"></i></li>
                             <li><i class="fa fa-star" aria-hidden="true"></i></li>
                             <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                            <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+                            <li><i class="fa fa-star" aria-hidden="true"></i></li>
                         </ul>
-                        <div class="product_color">
-                            <span>Select Color:</span>
-                            <ul>
-                                <li style="background: #e54e5d"></li>
-                                <li style="background: #252525"></li>
-                                <li style="background: #60b3f3"></li>
-                            </ul>
-                        </div>
                         <div class="quantity d-flex flex-column flex-sm-row
 								align-items-sm-center">
-                            <span>Quantity:</span>
-                            <div class="quantity_selector">
+                            <span>Số lượng:</span>
+                            <c:url value="boot/detail/thanh-toan/${bootID.ID}" var="url"/>
+                            <form:form action="${url}" modelAttribute="producSelled" method="POST" enctype="multipart/form-data">
+                            	<div class="quantity_selector">
+                                <span class="minus"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                <span><form:hidden id="quantity_value" path="quantity" value="1"/>1</span>
+                                <span class="plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                            	</div>
+                            </form:form>
+                            <div class="red_button add_to_cart_button"><a href='<c:url value = "/boot/detail/thanh-toan/${bootID.ID}"/>'>Thanh toán</a></div>
+                            
+                            <%-- <div class="quantity_selector">
                                 <span class="minus"><i class="fa fa-minus" aria-hidden="true"></i></span>
                                 <span id="quantity_value">1</span>
                                 <span class="plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
                             </div>
-                            <div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
-                            <div class="product_favorite d-flex flex-column align-items-center
-									justify-content-center"></div>
+                            <div class="red_button add_to_cart_button"><a href='<c:url value = "/thanh-toan/${shoesDetail.ID}"/>'>Thanh toán</a></div> --%>
                         </div>
                     </div>
                 </div>
@@ -128,5 +130,7 @@
     <!-- section footer start -->
    	<jsp:include page="section footer.jsp"></jsp:include>
     <!-- section footer end -->
+    <script src='<c:url value="/views/js/jquery-3.2.1.min.js"/>'></script>
+	<script src='<c:url value="/views/js/single_custom.js"/>'></script>
 </body>
 </html>

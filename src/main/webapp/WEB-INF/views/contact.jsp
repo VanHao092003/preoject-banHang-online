@@ -43,10 +43,10 @@
                             			<form:input class="email-bt" path="email" placeholder="Email"/>
                             		</div>
                             		<div class="form-group textarea_bt">
-                            			<form:textarea class="email-bt" path="massage" placeholder="Masage"/>
+                            			<form:textarea class="massage-bt" path="massage" placeholder="Masage"/>
                             		</div>
                             		<div class="send_btn">
-                                		<form:button class="main_bt" value="sumbit">Send</form:button>
+                                		<form:button  class="main_bt" value="sumbit">Send</form:button>
                             		</div>
                             	</form:form>
                             </div>

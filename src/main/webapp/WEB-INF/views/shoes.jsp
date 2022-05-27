@@ -26,8 +26,8 @@
     <div class="layout_padding gallery_section">
         <div class="container">
         	<c:forEach items="${shoess}" var="o">
-        		<a href='<c:url value="${o.ID}"/>'>
-	                <div  class="col-sm-4">
+        		<a href='<c:url value="shoes/${o.ID}"/>'>
+	                <div class="col-sm-4">
 	                    <div class="best_shoes">
 	                        <p class="best_text">${o.name}</p>
 	                        <div class="shoes_icon"><img src='<c:url value= "/views/images/${o.image}"/>'></div>

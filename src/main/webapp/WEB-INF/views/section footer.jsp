@@ -11,10 +11,10 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-2">
-                        <div class="footer-logo"><img src='<c:url value = "/views/images/phone-icon.png"/>'><span class="map_text">(71) 1234567890</span></div>
+                        <div class="footer-logo"><img src='<c:url value = "/views/images/phone-icon.png"/>'><span class="map_text">0354485988 </span></div>
                     </div>
                     <div class="col-sm-6 col-lg-3">
-                        <div class="footer-logo"><img src='<c:url value = "/views/images/email-icon.png"/>'><span class="map_text">Demo@gmail.com</span></div>
+                        <div class="footer-logo"><img src='<c:url value = "/views/images/email-icon.png"/>'><span class="map_text">VanHao092003@gmail.com</span></div>
                     </div>
                     <div class="col-sm-6 col-lg-3">
                         <div class="social_icon">

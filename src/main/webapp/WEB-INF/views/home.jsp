@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -40,7 +42,7 @@
 						<div class="banner_taital">
 							<h1 class="banner_text">New Shoes </h1>
 							<h1 class="mens_text"><strong>${shoesMax.name}</strong></h1>
-							<a class = "link_bt" href='<c:url value="/${shoesMax.ID}"/>'><button class="buy_bt">See More</button></a>
+							<a class = "link_bt" href='<c:url value="shoes/${shoesMax.ID}"/>'><button class="buy_bt">See More</button></a>
 						</div>
 					</div>
 						<div class="col-sm-5">
@@ -60,7 +62,7 @@
 								<div class="banner_taital">
 									<h1 class="banner_text">New Shoes </h1>
 									<h1 class="mens_text"><strong>${o.name}</strong></h1>
-									<a href='<c:url value="/${o.ID}"/>'><button class="buy_bt">See More</button></a>
+									<a href='<c:url value="shoes/${o.ID}"/>'><button class="buy_bt">See More</button></a>
 								</div>
 							</div>
 							<div class="col-sm-5">
@@ -69,6 +71,26 @@
 						</div>
 	                </div>
 	            </c:forEach>
+	            <div class="carousel-item">
+                    	<div class="row">
+							<div class="col-sm-2 padding_0">
+								<p class="mens_taital">Men Shoes</p>
+									<div class="page_no">0/2</div>
+						<p class="mens_taital_2">Men Shoes</p>
+					</div>
+					<div class="col-sm-5">
+						<div class="banner_taital">
+							<h1 class="banner_text">New Shoes </h1>
+							<h1 class="mens_text"><strong>${bootMin.name}</strong></h1>
+							<a class = "link_bt" href='<c:url value="/boot/detail//${bootMin.ID}"/>'><button class="buy_bt">See More</button></a>
+						</div>
+					</div>
+						<div class="col-sm-5">
+							<div class="shoes_img"><img src='<c:url value="/views/images/${bootMin.image}"/>'></div>
+						</div>
+					</div>
+                </div>
+	            
             </div>
         </div>
     </div>
@@ -155,36 +177,38 @@
     <div class="layout_padding gallery_section">
     	<div class="container">
     		<c:forEach items="${shoessHome}" var="o">
-                <div  class="col-sm-4">
-                    <div class="best_shoes">
-                        <p class="best_text">${o.name}</p>
-                        <div class="shoes_icon"><img src="${o.image}"></div>
-                        <div class="star_text">
-                            <div class="left_part">
-                                <ul>
-                                    <li>
-                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="right_part">
-                                <div class="shoes_price"><span style="color: #ff4e5b;">$ ${o.money}</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <a href='<c:url value="shoes/${o.ID}"/>'>
+	                <div  class="col-sm-4">
+	                    <div class="best_shoes">
+	                        <p class="best_text">${o.name}</p>
+	                        <div class="shoes_icon"><img src='<c:url value= "/views/images/${o.image}"/>'></div>
+	                        <div class="star_text">
+	                            <div class="left_part">
+	                                <ul>
+	                                    <li>
+	                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
+	                                    </li>
+	                                    <li>
+	                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
+	                                    </li>
+	                                    <li>
+	                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
+	                                    </li>
+	                                    <li>
+	                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
+	                                    </li>
+	                                    <li>
+	                                        <a href="#"><img src='<c:url value="/views/images/star-icon.png"/>'></a>
+	                                    </li>
+	                                </ul>
+	                            </div>
+	                            <div class="right_part">
+	                                <div class="shoes_price"><span style="color: #ff4e5b;">$ ${o.money}</span></div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+	          	</a>
         	</c:forEach>
     	</div>
     	<div class="buy_now_bt">
@@ -195,48 +219,6 @@
     </div>
    	<!-- New Arrivals section end -->
    	<!-- contact section start -->
-    <div class="layout_padding contact_section">
-    	<div class="container">
-    		<h1 class="new_text"><strong>Contact Now</strong></h1>
-    	</div>
-    	<div class="container-fluid ram">
-    		<div class="row">
-    			<div class="col-md-6">
-    				<div class="email_box">
-                    <div class="input_main">
-                       <div class="container">
-                          <form action="/action_page.php">
-                            <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Name" name="Name">
-                            </div>
-                            <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Phone Numbar" name="Name">
-                            </div>
-                            <div class="form-group">
-                              <input type="text" class="email-bt" placeholder="Email" name="Email">
-                            </div>
-                            
-                            <div class="form-group">
-                                <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
-                            </div>
-                          </form>   
-                       </div> 
-                       <div class="send_btn">
-                        <button class="main_bt">Send</button>
-                       </div>                   
-                    </div>
-    		</div>
-    			</div>
-    			<div class="col-md-6">
-    				<div class="shop_banner">
-    					<div class="our_shop">
-    						<button class="out_shop_bt">Our Shop</button>
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-    	</div>
-    </div>
    	<!-- contact section end -->
 	<!-- section footer start -->
    	<jsp:include page="section footer.jsp"></jsp:include>

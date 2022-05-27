@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.WebSellingShoes.model.Boot;
 import com.WebSellingShoes.model.ContactNow;
+import com.WebSellingShoes.model.ProductSelled;
 import com.WebSellingShoes.model.Shoes;
 import com.WebSellingShoes.service.Service;
 
@@ -23,12 +25,14 @@ public class Controller {
 	
 	@RequestMapping(value = "/home")
 	public String home(HttpServletRequest httpServletRequest) {
-		Shoes shoesMax = service.showShoesMax();
+		Shoes shoesMax = service.showShoesMin();
 		httpServletRequest.setAttribute("shoesMax", shoesMax);
 		List<Shoes> shoesHome = service.showShoesHome();
 		httpServletRequest.setAttribute("shoesHome", shoesHome);
 		List<Shoes> shoess = service.showShoes();
 		httpServletRequest.setAttribute("shoessHome", shoess);
+		Boot boot = service.showBootMin();
+		httpServletRequest.setAttribute("bootMin", boot);
 		return "home";
 	}
 	
@@ -60,17 +64,54 @@ public class Controller {
 		return "shoes";
 	}
 	
-	@RequestMapping(value = "/racing boots")
+	@RequestMapping(value = "/boots")
 	public String racing_boots(HttpServletRequest httpServletRequest) {
+		List<Boot> boots = service.showAllBoot();
+		httpServletRequest.setAttribute("boots", boots);
+		Boot boot = service.showBootMin();
+		httpServletRequest.setAttribute("boot", boot);
+		
 		return "racing boots";
 	}
 	
-	@RequestMapping(value = "/{ID}", method = RequestMethod.GET)
+	@RequestMapping(value = "/shoes/{ID}", method = RequestMethod.GET)
 	public String detail(HttpServletRequest httpServletRequest, @PathVariable("ID") int ID) {
 		Shoes shoes = service.detail(ID);
 		httpServletRequest.setAttribute("shoesDetail", shoes);
-		return "detail";
+		ProductSelled productSelled = new ProductSelled();
+		httpServletRequest.setAttribute("producSelled", productSelled);
+		return "detailShoes";
 	}
 	
+	@RequestMapping(value="/shoes/thanh-toan/{ID}", method = RequestMethod.GET)
+	public String  thanh_toan(HttpServletRequest httpServletRequest, @PathVariable("ID") int ID) {
+		
+		Shoes shoes = service.detail(ID);
+		httpServletRequest.setAttribute("shoesThanh_toan", shoes);
+		return "thanh-toan";
+	}
 	
+	@RequestMapping(value="/boot")
+		public String boot(HttpServletRequest httpServletRequest) {
+			List<Boot> boots = service.showAllBoot();
+			httpServletRequest.setAttribute("boots", boots);
+			return "boot";
+		}
+	
+	@RequestMapping(value="/boot/detail/{ID}")
+	public String showBootByID(HttpServletRequest httpServletRequest, @PathVariable("ID") int ID) {
+		Boot bootID = service.ShowBootByID(ID);
+		httpServletRequest.setAttribute("bootID", bootID);
+		ProductSelled productSelled = new ProductSelled();
+		httpServletRequest.setAttribute("producSelled", productSelled);
+		return "detailBoot";
+	}
+	
+	@RequestMapping(value="/boot/detail/thanh-toan/{ID}", method = RequestMethod.GET)
+	public String  thanh_toan_boot(HttpServletRequest httpServletRequest, @PathVariable("ID") int ID) {
+		
+		Boot boot = service.ShowBootByID(ID);
+		httpServletRequest.setAttribute("shoesThanh_toan_boot", boot);
+		return "thanh-toan-boot";
+	}
 }

@@ -15,13 +15,13 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
-                                <a class="nav-item nav-link" href='<c:url value="home"/>'>Home</a>
-                                <a class="nav-item nav-link" href='<c:url value="collection"/>'>Collection</a>
-                                <a class="nav-item nav-link" href='<c:url value="shoes"/>'>Shoes</a>
-                                <a class="nav-item nav-link" href='<c:url value="racing boots"/>'>Racing Boots</a>
-                                <a class="nav-item nav-link" href='<c:url value="contact"/>'>Contact</a>
-                                <a class="nav-item nav-link last" href="#"><img src='<c:url value = "/views/images/search_icon.png"/>'></a>
-                                <a class="nav-item nav-link last" href="contact.html"><img src='<c:url value = "/views/images/shop_icon.png"/>'></a>
+                                <a class="nav-item nav-link" href='<c:url value="/home"/>'>Home</a>
+                                <a class="nav-item nav-link" href='<c:url value="/collection"/>'>Collection</a>
+                                <a class="nav-item nav-link" href='<c:url value="/shoes"/>'>Shoes</a>
+                                <a class="nav-item nav-link" href='<c:url value="/boots"/>'>Boots</a>
+                                <a class="nav-item nav-link" href='<c:url value="/contact"/>'>Hỏi đáp</a>
+                                <a class="nav-item nav-link last width_icon" href="#"><img class="image_search" src='<c:url value = "/views/images/search_icon.png"/>'></a>
+                                <a class="nav-item nav-link last width_icon" href="contact.html"><img class="image_search"  src='<c:url value = "/views/images/shop_icon.png"/>'></a>
                             </div>
                         </div>
                     </nav>

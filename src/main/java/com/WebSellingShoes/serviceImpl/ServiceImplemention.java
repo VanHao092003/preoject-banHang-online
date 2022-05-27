@@ -5,7 +5,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.WebSellingShoes.DAO.DAO;
+import com.WebSellingShoes.model.Boot;
 import com.WebSellingShoes.model.ContactNow;
+import com.WebSellingShoes.model.Customer;
+import com.WebSellingShoes.model.ProductSelled;
 import com.WebSellingShoes.model.Shoes;
 import com.WebSellingShoes.service.Service;
 
@@ -36,8 +39,33 @@ public class ServiceImplemention implements Service{
 	}
 
 	@Override
-	public Shoes showShoesMax() {
-		return dao.showShoesMax();
+	public Shoes showShoesMin() {
+		return dao.showShoesMin();
+	}
+
+	@Override
+	public void addCustomer(Customer customer) {
+		dao.addCustomer(customer);
+	}
+
+	@Override
+	public void addProductSelled(ProductSelled productSelled) {
+		dao.addProductSelled(productSelled);
+	}
+
+	@Override
+	public List<Boot> showAllBoot() {
+		return dao.showAllBoot();
+	}
+
+	@Override
+	public Boot showBootMin() {
+		return dao.showBootMin();
+	}
+
+	@Override
+	public Boot ShowBootByID(int ID) {
+		return dao.showBootByID(ID);
 	}
 
 }

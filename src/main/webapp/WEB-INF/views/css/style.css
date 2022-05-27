@@ -156,6 +156,11 @@ img {
      height: auto;
 }
 
+.image_search{
+	max-width: 400%;
+	height: auto;
+}
+
  :focus {
      outline: 0;
 }
@@ -187,6 +192,15 @@ img {
 
 .navbar-form input {
      border: none !important;
+}
+
+.original_price {
+  font-weight: 500;
+  font-size:20px;
+  color: #b9b4c7;
+  text-decoration: line-through;
+  line-height: 30px;
+  margin-top: 21px;
 }
 
 .badge {
@@ -274,7 +288,6 @@ button {
     padding-left: 1.6rem;
 }
 
-	
 .last{ padding-left: 30px !important; }
 .banner_text{
 	width: 100%;
@@ -529,7 +542,7 @@ body{
 .number_text{
 	width: 100%;
 	float: left;
-	font-size: 45pt;
+	font-size: 30pt;
 	color: #ed2540;
 	line-height: 75px;
 
