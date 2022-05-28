@@ -40,12 +40,11 @@
             <div class="footer_section_2">
                 <div class="row">
                     <div class="col-sm-4 col-lg-2">
-                        <p class="dummy_text"> ipsum dolor sit amet, consectetur ipsum dolor sit amet, consectetur ipsum dolor sit amet,</p>
+                        <p class="dummy_text"></p>
                     </div>
                     <div class="col-sm-4 col-lg-2">
-                        <h2 class="shop_text">Address </h2>
-                        <div class="image-icon"><img src='<c:url value = "/views/images/map-icon.png"/>'><span class="pet_text">No 40 Baria Sreet 15/2 NewYork City, NY, United
-									States.</span></div>
+                        <h2 class="shop_text">Địa chỉ </h2>
+                        <div class="image-icon"><img src='<c:url value = "/views/images/map-icon.png"/>'><span class="pet_text">Ngõ 26 - Nhân Hòa - Nhân Chính - Thanh Xuân - Hà Nội</span></div>
                     </div>
                     <div class="col-sm-4 col-md-6 col-lg-3">
                         <h2 class="shop_text">Our Company </h2>
@@ -82,7 +81,6 @@
             </div>
         </div>
     </div>
- <div class="copyright">2019 All Rights Reserved. <a href="https://html.design">Free html  Templates</a></div>
  <!-- Javascript files-->
     <script src='<c:url value = "/views/js/jquery.min.js"/>'></script>
     <script src='<c:url value = "/views/js/popper.min.js"/>'></script>

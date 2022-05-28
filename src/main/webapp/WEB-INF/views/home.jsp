@@ -35,14 +35,14 @@
                     	<div class="row">
 							<div class="col-sm-2 padding_0">
 								<p class="mens_taital">Men Shoes</p>
-									<div class="page_no">0/2</div>
+									<div class="page_no">1/4</div>
 						<p class="mens_taital_2">Men Shoes</p>
 					</div>
 					<div class="col-sm-5">
 						<div class="banner_taital">
 							<h1 class="banner_text">New Shoes </h1>
 							<h1 class="mens_text"><strong>${shoesMin.name}</strong></h1>
-							<a class = "link_bt" href='<c:url value="shoes/${shoesMin.ID}"/>'><button class="buy_bt">See More</button></a>
+							<a class = "link_bt" href='<c:url value="shoes/${shoesMin.ID}"/>'><button class="buy_bt">XEM THÊM</button></a>
 						</div>
 					</div>
 						<div class="col-sm-5">
@@ -55,14 +55,14 @@
                     	<div class="row">
 							<div class="col-sm-2 padding_0">
 								<p class="mens_taital">Men Shoes</p>
-								<div class="page_no">0/2</div>
+								<div class="page_no">2/4</div>
 								<p class="mens_taital_2">Men Shoes</p>
 							</div>
 							<div class="col-sm-5">
 								<div class="banner_taital">
 									<h1 class="banner_text">New Shoes </h1>
 									<h1 class="mens_text"><strong>${o.name}</strong></h1>
-									<a href='<c:url value="shoes/${o.ID}"/>'><button class="buy_bt">See More</button></a>
+									<a href='<c:url value="shoes/${o.ID}"/>'><button class="buy_bt">XEM THÊM</button></a>
 								</div>
 							</div>
 							<div class="col-sm-5">
@@ -74,13 +74,13 @@
 	            <div class="carousel-item">
                     	<div class="row">
 							<div class="col-sm-2 padding_0">
-								<p class="mens_taital">Men Shoes</p>
-									<div class="page_no">0/2</div>
-						<p class="mens_taital_2">Men Shoes</p>
+								<p class="mens_taital">BOOT</p>
+									<div class="page_no">4/4</div>
+						<p class="mens_taital_2">BOOT</p>
 					</div>
 					<div class="col-sm-5">
 						<div class="banner_taital">
-							<h1 class="banner_text">New Shoes </h1>
+							<h1 class="banner_text">New BOOT </h1>
 							<h1 class="mens_text"><strong>${bootMin.name}</strong></h1>
 							<a class = "link_bt" href='<c:url value="/boot/detail//${bootMin.ID}"/>'><button class="buy_bt">See More</button></a>
 						</div>
@@ -102,15 +102,14 @@
 	<!-- new collection section start -->
     <div class="layout_padding collection_section">
     	<div class="container">
-    	    <h1 class="new_text"><strong>New  Collection</strong></h1>
-    	    <p class="consectetur_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+    	    <h1 class="new_text"><strong>Bộ siêu tập mới</strong></h1>
     	    <div class="collection_section_2">
     	    	<div class="row">
     	    		<div class="col-md-6">
     	    			<div class="about-img">
-    	    				<button class="new_bt">New</button>
-    	    				<div class="shoes-img"><img src='<c:url value="/views/images/${shoesMax.image}"/>'></div>
-    	    				<p class="sport_text">Men Sports</p>
+    	    				<button class="new_bt">Mới</button>
+    	    				<div class="shoes-img"><a href='<c:url value="/shoes/${shoesMax.ID}"/>'><img src='<c:url value="/views/images/${shoesMax.image}"/>'></a></div>
+    	    				<p class="sport_text">Giày cổ cao</p>
     	    				<div class="dolar_text"><strong style="color: #f12a47;">${shoesMax.money} Đ</strong> </div>
     	    				<div class="star_icon">
     	    					<ul>
@@ -122,12 +121,12 @@
     	    					</ul>
     	    				</div>
     	    			</div>
-    	    			<button class="seemore_bt">See More</button>
+    	    			<button class="seemore_bt">XEM THÊM</button>
     	    		</div>
     	    		<div class="col-md-6">
     	    			<div class="about-img2">
-    	    				<div class="shoes-img2"><img src='<c:url value="/views/images/${bootMax.image}"/>'></div>
-    	    				<p class="sport_text">Men Sports</p>
+    	    				<div class="shoes-img2"><a href='<c:url value="/boot/detail/${bootMax.ID}"/>'><img src='<c:url value="/views/images/${bootMax.image}"/>'></a></div>
+    	    				<p class="sport_text">Boot</p>
     	    				<div class="dolar_text"><strong style="color: #f12a47;">${bootMax.money} Đ</strong> </div>
     	    				<div class="star_icon">
     	    					<ul>
@@ -146,8 +145,7 @@
     </div>
     <div class="collection_section">
     	<div class="container">
-    		<h1 class="new_text"><strong>Racing Boots</strong></h1>
-    	    <p class="consectetur_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+    		<h1 class="new_text"><strong>Boots</strong></h1>
     	</div>
     </div>
         <div class="collectipn_section_3 layout_padding">
@@ -159,7 +157,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="sale_text"><strong>Sale <br><span style="color: #0a0506;">JOGING</span>
-										<br>SHOES</strong></div>
+										<br>BOOT</strong></div>
 							<div class="original_price" > 6.000.000 Đ</div>
                             <div class="number_text"><strong><span style="color: #0a0506">${bootMin.money} Đ</span></strong></div>
                             <button class="seemore">See More</button>
@@ -170,8 +168,7 @@
         </div>
     <div class="collection_section layout_padding">
     	<div class="container">
-    		<h1 class="new_text"><strong>New Arrivals Products</strong></h1>
-    	    <p class="consectetur_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+    		<h1 class="new_text"><strong>Sản phẩm mới về</strong></h1>
     	</div>
     </div>
 	<!-- new collection section end -->
@@ -205,7 +202,7 @@
 	                                </ul>
 	                            </div>
 	                            <div class="right_part">
-	                                <div class="shoes_price"><span style="color: #ff4e5b;">$ ${o.money}</span></div>
+	                                <div class="shoes_price"><span style="color: #ff4e5b;">${o.money} Đ</span></div>
 	                            </div>
 	                        </div>
 	                    </div>
@@ -239,7 +236,7 @@
 	                                </ul>
 	                            </div>
 	                            <div class="right_part">
-	                                <div class="shoes_price"><span style="color: #ff4e5b;">$ ${o.money}</span></div>
+	                                <div class="shoes_price"><span style="color: #ff4e5b;">${o.money} Đ</span></div>
 	                            </div>
 	                        </div>
 	                    </div>
@@ -249,7 +246,7 @@
     	</div>
     	<div class="buy_now_bt">
     		<a class="buy_text" href='<c:url value="shoes"/>'>
-                <button class="button_buy">Buy Now</button>
+                <button class="button_buy">XEM THÊM</button>
                </a>
         </div>
     </div>

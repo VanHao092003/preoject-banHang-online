@@ -20,9 +20,9 @@
       <div class="card_1">
         <div class="leftside">
         	<div class= "leftside_top">
-	        	<div class="leftside_top_a">
-	        		<a>${shoesThanh_toan_boot.name}</a>
-	        	</div>	
+	        	<p class="best_text">
+	        		${shoesThanh_toan_boot.name }
+	        	</p>
 	        	<div class="leftside_top_img">
 	        			<img
 		            src='<c:url value="/views/images/${shoesThanh_toan_boot.image}"/>'

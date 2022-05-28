@@ -98,7 +98,7 @@ public class Controller {
 		
 		Shoes shoes = service.detail(ID);
 		httpServletRequest.setAttribute("shoesThanh_toan", shoes);
-		return "thanh-toan";
+		return "thanh-toan-shoes";
 	}
 	
 	@RequestMapping(value="/boot")
@@ -123,5 +123,15 @@ public class Controller {
 		Boot boot = service.ShowBootByID(ID);
 		httpServletRequest.setAttribute("shoesThanh_toan_boot", boot);
 		return "thanh-toan-boot";
+	}
+	
+	@RequestMapping(value="/search")
+	public String search(HttpServletRequest httpServletRequest) {
+		String txt = httpServletRequest.getParameter("search");
+		List<Shoes> shoes = service.showBySearchShoes(txt);
+		List<Boot> boots = service.showBySearchBoot(txt);
+		httpServletRequest.setAttribute("shoesSeaerch", boots);
+		httpServletRequest.setAttribute("bootsSearch", shoes);
+		return "search";
 	}
 }

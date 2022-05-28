@@ -79,4 +79,16 @@ public class ServiceImplemention implements Service{
 		return dao.showShoesMax();
 	}
 
+	@Override
+	public List<Shoes> showBySearchShoes(String search) {
+		// TODO Auto-generated method stub
+		return dao.showBySearchShoes(search);
+	}
+
+	@Override
+	public List<Boot> showBySearchBoot(String search) {
+		// TODO Auto-generated method stub
+		return dao.showBySearchBoot(search);
+	}
+
 }

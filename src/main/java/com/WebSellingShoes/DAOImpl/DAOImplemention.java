@@ -92,6 +92,18 @@ public class DAOImplemention implements DAO{
 		String sql = "select * from shoes where ID = (select max(ID) from shoes)";
 		return jdbcTemplate.queryForObject(sql, new Rowmapping());
 	}
+
+	@Override
+	public List<Shoes> showBySearchShoes(String search) {
+		String sql = "select * from shoes where name like '%" + search + "%'";
+		return jdbcTemplate.query(sql, new Rowmapping());
+	}
+
+	@Override
+	public List<Boot> showBySearchBoot(String search) {
+		String sql = "select * from boot where name like '%" + search + "%'";
+		return jdbcTemplate.query(sql, new RowmappingBoot());
+	}
 	
 	
 	

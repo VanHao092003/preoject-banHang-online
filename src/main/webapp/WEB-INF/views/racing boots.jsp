@@ -67,7 +67,7 @@
 	                                </ul>
 	                            </div>
 	                            <div class="right_part">
-	                                <div class="shoes_price"><span style="color: #ff4e5b;">$ ${o.money}</span></div>
+	                                <div class="shoes_price"><span style="color: #ff4e5b;">${o.money} Đ</span></div>
 	                            </div>
 	                        </div>
 	                    </div>

@@ -37,10 +37,12 @@
     	    					</ul>
     	    				</div>
     	    			</div>
+    	    			
     	    			<button class="seemore_bt">See More</button>
     	    		</div>
     	    		<div class="col-md-6">
     	    			<div class="about-img2">
+    	    				<button class="new_bt">New</button>
     	    				<div class="shoes-img2"><img src='<c:url value="/views/images/${bootMax.image}"/>'></div>
     	    				<p class="sport_text">Men Sports</p>
     	    				<div class="dolar_text"><strong style="color: #f12a47;">${bootMax.money} Đ</strong> </div>

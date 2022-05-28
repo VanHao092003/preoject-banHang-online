@@ -21,4 +21,6 @@ public interface Service {
 	public Boot ShowBootByID(int ID);
 	public Boot showBootMax();
 	public Shoes showShoesMax();
+	public List<Shoes> showBySearchShoes(String search);
+	public List<Boot> showBySearchBoot(String search);
 }
