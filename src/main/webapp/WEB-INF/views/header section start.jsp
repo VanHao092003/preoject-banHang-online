@@ -16,13 +16,13 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
-                                <a class="nav-item nav-link" href='<c:url value="/home"/>'>Home</a>
-                                <a class="nav-item nav-link" href='<c:url value="/collection"/>'>Collection</a>
-                                <a class="nav-item nav-link" href='<c:url value="/shoes"/>'>Shoes</a>
+                                <a style="width: 160px;" class="nav-item nav-link" href='<c:url value="/home"/>'>Trang chủ</a>
+                                <a style="width: 170px;" class="nav-item nav-link" href='<c:url value="/collection"/>'>Bộ siêu tập</a>
+                                <a class="nav-item nav-link" href='<c:url value="/shoes"/>'>Giày</a>
                                 <a class="nav-item nav-link" href='<c:url value="/boots"/>'>Boots</a>
                                 <a style="width: 140px;" class="nav-item nav-link" href='<c:url value="/contact"/>'>Hỏi đáp</a>
                                 <form class=" nav-item nav-link" action="/WebSellingShoes/search">
-                                	<input style="height: 60%; padding: 0px; width: 220px;" name="search" type="text">
+                                	<input placeholder="Tìm kiếm" style="font-size:16px; height: 80%; padding: 0px; width: 220px;" name="search" type="text">
  		                      	</form>
                             	<a style="padding-left:0px;" class=" nav-item nav-link icon_search" href="#"><img class="image_search_input" src='<c:url value = "/views/images/search_icon.png"/>'></a>
                      			<a class=" nav-item nav-link icon_search" href="contact.html"><img class="image_search"  src='<c:url value = "/views/images/shop_icon.png"/>'></a>

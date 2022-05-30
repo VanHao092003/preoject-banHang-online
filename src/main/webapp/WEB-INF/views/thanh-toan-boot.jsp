@@ -24,11 +24,7 @@
 	        		${shoesThanh_toan_boot.name }
 	        	</p>
 	        	<div class="leftside_top_img">
-	        			<img
-		            src='<c:url value="/views/images/${shoesThanh_toan_boot.image}"/>'
-		            class="product"
-		            alt="Shoes"
-		          	/>
+	        			<img src='<c:url value="/views/images/${shoesThanh_toan_boot.image}"/>' class="product" alt="Shoes"/>
 	        	</div>
         	</div>
         	<div class= "leftside_bottom">
@@ -38,7 +34,11 @@
         		</div>
         		<div class="leftside_bottom_">
         			<a>Số lượng:</a>
-        			<a>có</a>
+        			<a>${productSelled.quantity}</a>
+        		</div>
+        		<div class="leftside_bottom_">
+        			<a>Vận chuyển:</a>
+        			<a>0 Đ</a>
         		</div>
         		<hr>
         		<div class="leftside_bottom_">
@@ -48,29 +48,16 @@
         	</div>
         </div>
         <div class="rightside">
-        	<c:url value="thanh=toan/success" var="url"/>
-        	<form:form action="${url}" modelAttribute="shoesThanh_toan_boot" method="POST" enctype="multipart/form-data">
-        		<h1>Thông tin thanh toán</h1>
-        		<p>Tên người nhận</p>
-        		<form:input path="ID"/>
-        	</form:form>
-          <form action="">
+          <form action="/WebSellingShoes/check_successful">
             <h1>Thông tin thanh toán</h1>
-            <p>Tên người nhận</p>
-            <input type="text" class="inputbox" name="name" required />
-            <p>Số điện thoại</p>
-            <input type="number" class="inputbox" name="card_number" required />
-
-            <p>Card Type</p>
-           
-		<div class="expcvv">
-
-            <p class="expcvv_text">Expiry</p>
-            <input type="date" class="inputbox" name="exp_date" id="exp_date" required />
-
-            <p class="expcvv_text2">CVV</p>
-            <input type="password" class="inputbox" name="cvv" id="cvv" required />
-        </div>
+            <p>Mã đơn hàng: </p>
+            <input type="text" class="inputbox" name="ID_customer" value="${randomInt}" required />
+            <input type="text" class="inputbox" name="name_customer" placeholder="Tên người nhận" required />
+            <input type="text" class="inputbox" name="address_customer" placeholder="Địa chỉ nhận hàng" required />
+            <input type="text" class="inputbox" name="phone_customer" placeholder="Số điện thoại" required />
+            <input type="hidden" name="ID_product" value="${productSelled.ID}" required />
+			<p style="color: black;">Phương thức thanh toán: Khi nhận hàng và kiểm tra</p>
+			<p style="color: black;">Ngày nhận hàng: 5 ngày kể từ ngày mua.</p>
             <p></p>
             <button type="submit" class="button">CheckOut</button>
           </form>

@@ -10,6 +10,7 @@ import com.WebSellingShoes.model.ContactNow;
 import com.WebSellingShoes.model.Customer;
 import com.WebSellingShoes.model.ProductSelled;
 import com.WebSellingShoes.model.Shoes;
+import com.WebSellingShoes.model.newsInformation;
 import com.WebSellingShoes.service.Service;
 
 @org.springframework.stereotype.Service
@@ -89,6 +90,12 @@ public class ServiceImplemention implements Service{
 	public List<Boot> showBySearchBoot(String search) {
 		// TODO Auto-generated method stub
 		return dao.showBySearchBoot(search);
+	}
+
+	@Override
+	public void addNewsInformation(newsInformation information) {
+		// TODO Auto-generated method stub
+		dao.addNewsInformation(information);
 	}
 
 }

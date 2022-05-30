@@ -17,10 +17,10 @@
 		<jsp:include page="header section start.jsp"></jsp:include>
     </div>
     <!-- contact section start -->
-    <div class="collection_text">Contact Us</div>
+    <div class="collection_text">Liên hệ với chúng tôi</div>
     <div class="layout_padding contact_section">
         <div class="container">
-            <h1 class="new_text"><strong>Contact Now</strong></h1>
+            <h1 class="new_text"><strong>Liên hệ ngay</strong></h1>
         </div>
         <div class="container-fluid ram">
             <div class="row">
@@ -34,16 +34,16 @@
                             			<form:hidden path="ID"/>
                             		</div>
                             		<div class="form-group">
-                            			<form:input class="email-bt" path="name" placeholder="Name"/>
+                            			<form:input class="email-bt" path="name" placeholder="Họ và tên"/>
                             		</div>
                             		<div class="form-group">
-                            			<form:input class="email-bt" path="phone" placeholder="Phone"/>
+                            			<form:input class="email-bt" path="phone" placeholder="Số điện thoại"/>
                             		</div>
                             		<div class="form-group">
-                            			<form:input class="email-bt" path="email" placeholder="Email"/>
+                            			<form:input class="email-bt" path="email" placeholder="Địa chỉ Email"/>
                             		</div>
                             		<div class="form-group textarea_bt">
-                            			<form:textarea class="massage-bt" path="massage" placeholder="Masage"/>
+                            			<form:textarea class="massage-bt" path="massage" placeholder="Lời nhắn"/>
                             		</div>
                             		<div class="send_btn">
                                 		<form:button  class="main_bt" value="sumbit">Send</form:button>
@@ -56,7 +56,7 @@
                 <div class="col-md-6">
                     <div class="shop_banner">
                         <div class="our_shop">
-                            <button class="out_shop_bt">Our Shop</button>
+                            <a href="#"><button class="out_shop_bt">Our Shop</button></a>
                         </div>
                     </div>
                 </div>

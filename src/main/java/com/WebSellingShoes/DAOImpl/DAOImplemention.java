@@ -12,6 +12,7 @@ import com.WebSellingShoes.model.ContactNow;
 import com.WebSellingShoes.model.Customer;
 import com.WebSellingShoes.model.ProductSelled;
 import com.WebSellingShoes.model.Shoes;
+import com.WebSellingShoes.model.newsInformation;
 import com.WebSellingShoes.rowmapping.Rowmapping;
 import com.WebSellingShoes.rowmapping.RowmappingBoot;
 
@@ -59,8 +60,8 @@ public class DAOImplemention implements DAO{
 
 	@Override
 	public void addProductSelled(ProductSelled productSelled) {
-		String sql = "insert into customer(ID, quantity, price) values (?, ?, ?)";
-		jdbcTemplate.update(sql, productSelled.getID(), productSelled.getQuantity(), productSelled.getPrice());
+		String sql = "insert into productSelled(ID, quantity, price, name) values (?, ?, ?, ?)";
+		jdbcTemplate.update(sql, productSelled.getID(), productSelled.getQuantity(), productSelled.getPrice(), productSelled.getName());
 	}
 
 	@Override
@@ -103,6 +104,12 @@ public class DAOImplemention implements DAO{
 	public List<Boot> showBySearchBoot(String search) {
 		String sql = "select * from boot where name like '%" + search + "%'";
 		return jdbcTemplate.query(sql, new RowmappingBoot());
+	}
+
+	@Override
+	public void addNewsInformation(newsInformation information) {
+		String sql = "insert into newsInformation (ID, email) values(?, ?)";
+		jdbcTemplate.update(sql, information.getID(), information.getEmail());
 	}
 	
 	

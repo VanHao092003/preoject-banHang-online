@@ -1,16 +1,23 @@
 package com.WebSellingShoes.model;
 
+import java.util.Random;
+
 public class Customer {
-	private int ID;
+	private String ID;
 	private String name;
 	private String address;
 	private String phone;
-	private int ID_product;
+	private String ID_product;
 	
-	public int getID() {
+	public void random() {
+		Random random = new Random();
+		 this.ID = random.nextInt(1000) + 99995 +"";
+	}
+	
+	public String getID() {
 		return ID;
 	}
-	public void setID(int iD) {
+	public void setID(String iD) {
 		ID = iD;
 	}
 	public String getName() {
@@ -31,10 +38,10 @@ public class Customer {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public int getID_product() {
+	public String getID_product() {
 		return ID_product;
 	}
-	public void setID_product(int iD_product) {
+	public void setID_product(String iD_product) {
 		ID_product = iD_product;
 	}
 	

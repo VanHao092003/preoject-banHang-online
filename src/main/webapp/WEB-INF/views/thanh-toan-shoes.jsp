@@ -38,7 +38,7 @@
         		</div>
         		<div class="leftside_bottom_">
         			<a>Số lượng:</a>
-        			<a>có</a>
+        			<a>${productSelled_shoes.quantity}</a>
         		</div>
         		<hr>
         		<div class="leftside_bottom_">
@@ -48,28 +48,16 @@
         	</div>
         </div>
         <div class="rightside">
-        	<c:url value="thanh=toan/success" var="url"/>
-        	<form:form action="${url}" modelAttribute="shoesThanh_toan" method="POST" enctype="multipart/form-data">
-        		<h1>Thông tin thanh toán</h1>
-        		<p>Tên người nhận</p>
-        		<form:input path="ID"/>
-        	</form:form>
-          <form action="">
+    		<form action="/WebSellingShoes/check_successful-boot">
             <h1>Thông tin thanh toán</h1>
-            <p>Tên người nhận</p>
-            <input type="text" class="inputbox" name="name" required />
-            <p>Số điện thoại</p>
-            <input type="number" class="inputbox" name="card_number" required />
-
-            <p>Card Type</p>
-		<div class="expcvv">
-
-            <p class="expcvv_text">Expiry</p>
-            <input type="date" class="inputbox" name="exp_date" id="exp_date" required />
-
-            <p class="expcvv_text2">CVV</p>
-            <input type="password" class="inputbox" name="cvv" id="cvv" required />
-        </div>
+            <p>Mã đơn hàng: </p>
+            <input type="text" class="inputbox" name="ID_customer_shoes" value="${randomInt_shoes}" required />
+            <input type="text" class="inputbox" name="name_customer_shoes" placeholder="Tên người nhận" required />
+            <input type="text" class="inputbox" name="address_customer_shoes" placeholder="Địa chỉ nhận hàng" required />
+            <input type="text" class="inputbox" name="phone_customer_shoes" placeholder="Số điện thoại" required />
+            <input type="hidden" name="ID_product_shoes" value="${productSelled_shoes.ID}" required />
+			<p style="color: black;">Phương thức thanh toán: Khi nhận hàng và kiểm tra</p>
+			<p style="color: black;">Ngày nhận hàng: 5 ngày kể từ ngày mua.</p>
             <p></p>
             <button type="submit" class="button">CheckOut</button>
           </form>

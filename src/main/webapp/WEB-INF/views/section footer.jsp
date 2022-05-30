@@ -47,35 +47,35 @@
                         <div class="image-icon"><img src='<c:url value = "/views/images/map-icon.png"/>'><span class="pet_text">Ngõ 26 - Nhân Hòa - Nhân Chính - Thanh Xuân - Hà Nội</span></div>
                     </div>
                     <div class="col-sm-4 col-md-6 col-lg-3">
-                        <h2 class="shop_text">Our Company </h2>
+                        <h2 class="shop_text">Công ty của chúng tôi </h2>
                         <div class="delivery_text">
                             <ul>
-                                <li>Delivery</li>
-                                <li>Legal Notice</li>
-                                <li>About us</li>
-                                <li>Secure payment</li>
-                                <li>Contact us</li>
+                                <li>Vận chuyển nhanh</li>
+                                <li>Thông báo pháp lý</li>
+                                <li>Thanh toán an toàn</li>
+                                <li>Liên hệ chúng tôi</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3">
-                        <h2 class="adderess_text">Products</h2>
+                        <h2 class="adderess_text">Các sản phẩm</h2>
                         <div class="delivery_text">
                             <ul>
-                                <li>Prices drop</li>
-                                <li>New products</li>
-                                <li>Best sales</li>
-                                <li>Contact us</li>
-                                <li>Sitemap</li>
+                                <li>Giá giảm</li>
+                                <li>Sản phẩm mới</li>
+                                <li>Hàng bán tốt nhất</li>
+                                <li>Liên hệ chúng tôi</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-2">
-                        <h2 class="adderess_text">Newsletter</h2>
+                        <h2 style="width: 250px;" class="adderess_text">Bản tin mới</h2>
                         <div class="form-group">
-                            <input type="text" class="enter_email" placeholder="Enter Your email" name="Name">
-                        </div>
-                        <button class="subscribr_bt">Subscribe</button>
+                        	<form action="/WebSellingShoes/dang-ky">
+                        		<input name="newsInformation" placeholder="Nhập email của bạn">
+                        		<button class="subscribr_bt" type="submit" >Đăng ký</button>
+                        	</form>
+	                    </div>
                     </div>
                 </div>
             </div>

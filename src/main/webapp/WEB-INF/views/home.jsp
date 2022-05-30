@@ -121,7 +121,7 @@
     	    					</ul>
     	    				</div>
     	    			</div>
-    	    			<button class="seemore_bt">XEM THÊM</button>
+    	    			<button style="background-color: #fff; cursor: default;" class="seemore_bt">XEM THÊM</button>
     	    		</div>
     	    		<div class="col-md-6">
     	    			<div class="about-img2">
@@ -160,7 +160,7 @@
 										<br>BOOT</strong></div>
 							<div class="original_price" > 6.000.000 Đ</div>
                             <div class="number_text"><strong><span style="color: #0a0506">${bootMin.money} Đ</span></strong></div>
-                            <button class="seemore">See More</button>
+                            <a href='<c:url value="boot/detail/${bootMin.ID}"/>'><button class="seemore">XEM CHI TIẾT</button></a>
                         </div>
                     </div>
                 </div>

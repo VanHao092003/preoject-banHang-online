@@ -8,12 +8,8 @@ public class ContactNow {
 	private String phone;
 	private String email;
 	private String massage;
-	
+
 	public ContactNow() {
-		
-	}
-	
-	public void random() {
 		Random random = new Random();
     	this.ID = random.nextInt(899999) + 100001;
 	}

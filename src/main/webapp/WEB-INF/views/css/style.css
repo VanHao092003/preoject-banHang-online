@@ -156,6 +156,17 @@ img {
      height: auto;
 }
 
+.inputbox_quantity{
+	width:50px ;
+	height: 30px;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.inputbox_form_quantity{
+	margin-left: 20px;	
+}
+
 .image_search{
 	max-width: 400%;
 	height: auto;
@@ -352,6 +363,10 @@ body{
 .container{
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.container img{
+	margin: auto;
 }
 
 .slide-wrapper{display:inline;}
@@ -584,14 +599,15 @@ body{
 }
 
 .best_text{
-	width: 100%;
+	width: 90%;
 	height:96px;
 	float: left;
-	font-size: 14pt;
+	font-size: 16pt;
 	color: #000;
 	text-align: center;
     margin-left: 0px;
     margin-bottom: 0px;
+    margin-left: 20px;
 }
 
 .shoes_icon{
@@ -823,6 +839,8 @@ a:hover {
     font-size: 13pt;
     height: 50px;
     color: #ffffff;
+    margin-top: 20px;
+    border-radius: 5px;
 }
 
 .icon_search{

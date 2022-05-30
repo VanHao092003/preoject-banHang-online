@@ -7,6 +7,7 @@ import com.WebSellingShoes.model.ContactNow;
 import com.WebSellingShoes.model.Customer;
 import com.WebSellingShoes.model.ProductSelled;
 import com.WebSellingShoes.model.Shoes;
+import com.WebSellingShoes.model.newsInformation;
 
 public interface DAO {
 	public void contactNow(ContactNow contactNow);
@@ -23,5 +24,5 @@ public interface DAO {
 	public Shoes showShoesMax();
 	public List<Shoes> showBySearchShoes(String search);
 	public List<Boot> showBySearchBoot(String search);
-
+	public void addNewsInformation(newsInformation information);
 }

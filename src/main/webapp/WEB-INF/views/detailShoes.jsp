@@ -104,22 +104,10 @@
                         <div class="quantity d-flex flex-column flex-sm-row
 								align-items-sm-center">
                             <span>Số lượng:</span>
-                            <c:url value="shoes/thanh-toan/${shoesDetail.ID}" var="url"/>
-                            <form:form action="${url}" modelAttribute="producSelled" method="POST" enctype="multipart/form-data">
-                            	<div class="quantity_selector">
-                                <span class="minus"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                <span><form:hidden id="quantity_value" path="quantity" value="1"/>1</span>
-                                <span class="plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                            	</div>
-                            </form:form>
-                            <div class="red_button add_to_cart_button"><a href='<c:url value = "/shoes/thanh-toan/${shoesDetail.ID}"/>'>Thanh toán</a></div>
-                            
-                            <%-- <div class="quantity_selector">
-                                <span class="minus"><i class="fa fa-minus" aria-hidden="true"></i></span>
-                                <span id="quantity_value">1</span>
-                                <span class="plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                            </div>
-                            <div class="red_button add_to_cart_button"><a href='<c:url value = "/thanh-toan/${shoesDetail.ID}"/>'>Thanh toán</a></div> --%>
+                           	<form class="inputbox_form_quantity" action="/WebSellingShoes/shoes/thanh-toan/${shoesDetail.ID}">
+           							 <input type="number" class="inputbox_quantity" value="1" name="quantity_shoes" required />
+           							 <button class="red_button add_to_cart_button" type="submit">Thanh toán</button>
+                             	</form>
                         </div>
                     </div>
                 </div>
