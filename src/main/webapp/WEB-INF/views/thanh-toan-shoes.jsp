@@ -43,7 +43,7 @@
         		<hr>
         		<div class="leftside_bottom_">
         			<a>Tổng:</a>
-        			<a>có</a>
+        			<a>${sumMoney_shoes}</a>
         		</div>
         	</div>
         </div>

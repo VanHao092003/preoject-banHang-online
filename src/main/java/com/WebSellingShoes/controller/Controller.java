@@ -99,9 +99,11 @@ public class Controller {
 		Shoes shoes = service.detail(ID);
 		httpServletRequest.setAttribute("shoesThanh_toan", shoes);
 		ProductSelled productSelled = new ProductSelled();
-		productSelled.setPrice(shoes.getMoney());
 		productSelled.setName(shoes.getName());
 		String quantity= httpServletRequest.getParameter("quantity_shoes");
+		String sumMoney = SumMoney(shoes.getMoney(), quantity);
+		httpServletRequest.setAttribute("sumMoney_shoes", sumMoney);
+		productSelled.setPrice(sumMoney);
 		productSelled.setQuantity(quantity);
 		httpServletRequest.setAttribute("productSelled_shoes", productSelled);
 		httpServletRequest.setAttribute("ID_product_shoes", productSelled.getID());
@@ -135,9 +137,11 @@ public class Controller {
 		Boot boot = service.ShowBootByID(ID);
 		httpServletRequest.setAttribute("shoesThanh_toan_boot", boot);
 		ProductSelled productSelled = new ProductSelled();
-		productSelled.setPrice(boot.getMoney());
 		productSelled.setName(boot.getName());
 		String quantity= httpServletRequest.getParameter("quantity");
+		String sumMoney = SumMoney(boot.getMoney(), quantity);
+		httpServletRequest.setAttribute("sumMoney_boot", sumMoney);
+		productSelled.setPrice(sumMoney);
 		productSelled.setQuantity(quantity);
 		httpServletRequest.setAttribute("productSelled", productSelled);
 		httpServletRequest.setAttribute("ID_product", productSelled.getID());
@@ -206,5 +210,27 @@ public class Controller {
 		customer.setID_product(ID_product);
 		service.addCustomer(customer);
 		return"successful";
+	}
+	
+	public String SumMoney(String money, String quantity) {
+		String[] array = money.split("\\.");
+        String moneyInteger = "";
+        for (String string : array) {
+            moneyInteger += string;
+        }
+        int Quantity = Integer.parseInt(quantity);
+        int Money = Integer.parseInt(moneyInteger);
+        String sumMoney = (Money * Quantity) + "";
+        int length = sumMoney.length();
+        String SumMoney = "";
+        for (int i = length; i >= 1; i -= 3) {
+            if (i - 3 >= 1) {
+                String SubString = sumMoney.substring(i - 3, i);
+                SumMoney = "." + SubString + SumMoney;
+            } else {
+                SumMoney = sumMoney.substring(0, i) + SumMoney;
+            }
+        }
+        return SumMoney;
 	}
 }
