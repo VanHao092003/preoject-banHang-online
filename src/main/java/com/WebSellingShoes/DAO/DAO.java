@@ -25,4 +25,6 @@ public interface DAO {
 	public List<Shoes> showBySearchShoes(String search);
 	public List<Boot> showBySearchBoot(String search);
 	public void addNewsInformation(newsInformation information);
+	public ProductSelled showProdductSelled(int ID);
+	public Customer showCustomer(int ID);
 }

@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Chi tiết đơn hàng</title>
+<title>Chi tiết đơn hàng boot</title>
 <jsp:include page="header.jsp"></jsp:include>
 <style type="text/css">
 	<%@include file="css/styleCheckout.css" %>
@@ -21,32 +21,31 @@
     <form style="width: 100%;" action="/WebSellingShoes/check_successful">
             <h1 style="width: 230px; margin: 10px auto 0 auto; padding-bottom: 0;">Sản phẩm đã mua</h1>
              <p style="margin-bottom: 5px; margin-top: 8px;">Mã sản phẩm: </p>
-            <input type="text" class="inputbox" name="ID_customer" value="${customer.ID_product}" required />
+            <input type="text" class="inputbox" name="ID_customer" value="${bootCheck.ID}" required />
             <p style="margin-bottom: 5px; margin-top: 8px;">Tên Sản phẩm:</p>
-            <input type="text" class="inputbox" name="name_customer" placeholder="Tên người nhận" required />
+            <input type="text" class="inputbox" name="name_customer" value="${bootCheck.name}" required />
              <p style="margin-bottom: 5px; margin-top: 8px;">Giá của 1 sản phẩm:</p>
-            <input type="text" class="inputbox" name="address_customer" placeholder="Địa chỉ nhận hàng" required />
+            <input type="text" class="inputbox" name="address_customer" value="${bootCheck.money} Đ" required />
              <p style="margin-bottom: 5px; margin-top: 8px;">Số lượng mua:</p>
-            <input type="text" class="inputbox" name="phone_customer" placeholder="Số điện thoại" required />
+            <input type="text" class="inputbox" name="phone_customer" value="${productSelled.quantity}" required />
             <p style="margin-bottom: 5px; margin-top: 8px;">Tiền vận chuyển: </p>
             <input type="text" class="inputbox" name="name_customer" value="0 đ" required />
             <hr>
             <p style="margin-bottom: 5px; margin-top: 8px;">Tiền phải thanh toán</p>
-            <input type="text" class="inputbox" name="name_customer" placeholder="Tên người nhận" required />
+            <input type="text" class="inputbox" name="name_customer" value="${productSelled.price} Đ" required />
           </form>
-    	
 	</div>
 	<div style=" width: 45%; margin: auto; display: flex; flex-direction: column; align-items: center;"  >
     	<form action="/WebSellingShoes/check_successful">
             <h1 style="width: 270px; margin: auto;">Thông tin thanh toán</h1>
              <p style="margin-bottom: 5px; margin-top: 8px;">Mã đơn hàng: </p>
-            <input type="text" class="inputbox" name="ID_customer" value="${randomInt}" required />
+            <input type="text" class="inputbox" name="ID_customer" value="${customer.ID_product}" required />
             <p style="margin-bottom: 5px; margin-top: 8px;">Tên khách hàng:</p>
-            <input type="text" class="inputbox" name="name_customer" placeholder="Tên người nhận" required />
+            <input type="text" class="inputbox" name="name_customer" value="${customer.name}" required />
              <p style="margin-bottom: 5px; margin-top: 8px;">Số điện thoại:</p>
-            <input type="text" class="inputbox" name="address_customer" placeholder="Địa chỉ nhận hàng" required />
+            <input type="text" class="inputbox" name="address_customer" value="${customer.phone}" required />
              <p style="margin-bottom: 5px; margin-top: 8px;">Địa chỉ:</p>
-            <input type="text" class="inputbox" name="phone_customer" placeholder="Số điện thoại" required />
+            <input type="text" class="inputbox" name="phone_customer" value="${customer.address}" required />
 			<p style="color: black;">Phương thức thanh toán: Khi nhận hàng và kiểm tra</p>
 			<p style="color: black;">Ngày nhận hàng: 5 ngày kể từ ngày mua.</p>	
 			<div style="width: 200px; margin: 50px auto 0 auto;">

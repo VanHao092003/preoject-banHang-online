@@ -97,6 +97,7 @@ public class Controller {
 	@RequestMapping(value = "/shoes/thanh-toan/{ID}", method = RequestMethod.GET)
 	public String thanh_toan(HttpServletRequest httpServletRequest, @PathVariable("ID") int ID) {
 		Shoes shoes = service.detail(ID);
+		httpServletRequest.setAttribute("ID_shoes", shoes.getID());
 		httpServletRequest.setAttribute("shoesThanh_toan", shoes);
 		ProductSelled productSelled = new ProductSelled();
 		productSelled.setName(shoes.getName());
@@ -135,6 +136,7 @@ public class Controller {
 	public String thanh_toan_boot(HttpServletRequest httpServletRequest, @PathVariable("ID") int ID) {
 
 		Boot boot = service.ShowBootByID(ID);
+		httpServletRequest.setAttribute("ID_boot", boot.getID());
 		httpServletRequest.setAttribute("shoesThanh_toan_boot", boot);
 		ProductSelled productSelled = new ProductSelled();
 		productSelled.setName(boot.getName());
@@ -177,38 +179,24 @@ public class Controller {
 		return "redirect:/home";
 	}
 	
-	@RequestMapping(value="/check_successful")
-	public String checkOut(HttpServletRequest httpServletRequest) {
-		Customer customer = new Customer();
-		String DI_customer = httpServletRequest.getParameter("ID_customer");
-		customer.setID(DI_customer);
-		String name_customer =httpServletRequest.getParameter("name_customer");
-		httpServletRequest.setAttribute("ID_customer", customer.getID());
-		customer.setName(name_customer);
-		String address_customer = httpServletRequest.getParameter("address_customer");
-		customer.setAddress(address_customer); 
-		String phone_customer = httpServletRequest.getParameter("phone_customer");
-		customer.setPhone(phone_customer);	
-		String ID_product = httpServletRequest.getParameter("ID_product");
-		customer.setID_product(ID_product);
-		service.addCustomer(customer);
-		return"successful";
-	}
-	
-	@RequestMapping(value="/check_successful-boot")
-	public String checkOutBoot(HttpServletRequest httpServletRequest) {
-		Customer customer = new Customer();
-		String DI_customer = httpServletRequest.getParameter("ID_customer_shoes");
-		customer.setID(DI_customer);
-		String name_customer =httpServletRequest.getParameter("name_customer_shoes");
-		customer.setName(name_customer);
-		String address_customer = httpServletRequest.getParameter("address_customer_shoes");
-		customer.setAddress(address_customer); 
-		String phone_customer = httpServletRequest.getParameter("phone_customer_shoes");
-		customer.setPhone(phone_customer);	
-		String ID_product = httpServletRequest.getParameter("ID_product_shoes");
-		customer.setID_product(ID_product);
-		service.addCustomer(customer);
+	@RequestMapping(value="/check_successful/{String}/{ID}")
+	public String checkOut(HttpServletRequest httpServletRequest, @PathVariable(value="String") String string, @PathVariable(value="ID") int ID) {
+			Customer customer = new Customer();
+			String DI_customer = httpServletRequest.getParameter("ID_customer");
+			customer.setID(DI_customer);
+			String name_customer =httpServletRequest.getParameter("name_customer");
+			httpServletRequest.setAttribute("ID_customer", customer.getID());
+			customer.setName(name_customer);
+			String address_customer = httpServletRequest.getParameter("address_customer");
+			customer.setAddress(address_customer); 
+			String phone_customer = httpServletRequest.getParameter("phone_customer");
+			customer.setPhone(phone_customer);	
+			String ID_product = httpServletRequest.getParameter("ID_product");
+			httpServletRequest.setAttribute("ID_product", ID_product);
+			httpServletRequest.setAttribute("String", string);
+			httpServletRequest.setAttribute("ID", ID);
+			customer.setID_product(ID_product);
+			service.addCustomer(customer);
 		return"successful";
 	}
 	
@@ -234,8 +222,22 @@ public class Controller {
         return SumMoney;
 	}
 	
-	@RequestMapping(value="/xem")
-	public String xem(HttpServletRequest httpServletRequest) {
-		return "successful";
+	@RequestMapping(value="/order-detail/{product}/{ID}/{ID_product}")
+	public String xem(HttpServletRequest httpServletRequest,@PathVariable(value="product") String product, @PathVariable(value="ID") int ID, @PathVariable(value="ID_product") int ID_product) {
+		 ProductSelled productSelled = service.showProdductSelled(ID_product);
+		 Customer customer = service.showCustomer(ID_product);
+		 httpServletRequest.setAttribute("productSelled", productSelled);
+		 httpServletRequest.setAttribute("customer", customer);
+		 if(product.equals("boot")) {
+			 Boot boot =service.ShowBootByID(ID);
+			 httpServletRequest.setAttribute("bootCheck", boot);
+			 return "orderDetail-boot";
+		 } else {
+			 Shoes shoes = service.detail(ID);
+			 httpServletRequest.setAttribute("shoesCheck", shoes);
+			 return "orderDetail-shoes";
+		 }
 	}
+	
+	
 }

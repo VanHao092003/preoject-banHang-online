@@ -98,4 +98,14 @@ public class ServiceImplemention implements Service{
 		dao.addNewsInformation(information);
 	}
 
+	@Override
+	public ProductSelled showProdductSelled(int ID) {
+		return dao.showProdductSelled(ID);
+	}
+
+	@Override
+	public Customer showCustomer(int ID) {
+		return dao.showCustomer(ID);
+	}
+
 }

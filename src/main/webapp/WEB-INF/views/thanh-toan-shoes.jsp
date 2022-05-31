@@ -47,19 +47,19 @@
         		<hr>
         		<div class="leftside_bottom_">
         			<a>Tổng:</a>
-        			<a>${sumMoney_shoes}</a>
+        			<a>${sumMoney_shoes} Đ</a>
         		</div>
         	</div>
         </div>
         <div class="rightside">
-    		<form action="/WebSellingShoes/check_successful-boot">
+    		<form action="/WebSellingShoes/check_successful/shoes/${ID_shoes}">
             <h1>Thông tin thanh toán</h1>
             <p>Mã đơn hàng: </p>
-            <input type="text" class="inputbox" name="ID_customer_shoes" value="${randomInt_shoes}" required />
-            <input type="text" class="inputbox" name="name_customer_shoes" placeholder="Tên người nhận" required />
-            <input type="text" class="inputbox" name="address_customer_shoes" placeholder="Địa chỉ nhận hàng" required />
-            <input type="text" class="inputbox" name="phone_customer_shoes" placeholder="Số điện thoại" required />
-            <input type="hidden" name="ID_product_shoes" value="${productSelled_shoes.ID}" required />
+            <input type="text" class="inputbox" name="ID_product" value="${ID_product_shoes}" required />
+            <input type="text" class="inputbox" name="name_customer" placeholder="Tên người nhận" required />
+            <input type="text" class="inputbox" name="address_customer" placeholder="Địa chỉ nhận hàng" required />
+            <input type="text" class="inputbox" name="phone_customer" placeholder="Số điện thoại" required />
+            <input type="hidden" name="ID_customer" value="${randomInt_shoes}" required />
 			<p style="color: black;">Phương thức thanh toán: Khi nhận hàng và kiểm tra</p>
 			<p style="color: black;">Ngày nhận hàng: 5 ngày kể từ ngày mua.</p>
             <p></p>

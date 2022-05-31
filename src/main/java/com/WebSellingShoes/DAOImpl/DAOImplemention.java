@@ -15,6 +15,8 @@ import com.WebSellingShoes.model.Shoes;
 import com.WebSellingShoes.model.newsInformation;
 import com.WebSellingShoes.rowmapping.Rowmapping;
 import com.WebSellingShoes.rowmapping.RowmappingBoot;
+import com.WebSellingShoes.rowmapping.RowmappingCustomer;
+import com.WebSellingShoes.rowmapping.RowmappingProductSelled;
 
 @Repository
 public class DAOImplemention implements DAO{
@@ -110,6 +112,18 @@ public class DAOImplemention implements DAO{
 	public void addNewsInformation(newsInformation information) {
 		String sql = "insert into newsInformation (ID, email) values(?, ?)";
 		jdbcTemplate.update(sql, information.getID(), information.getEmail());
+	}
+
+	@Override
+	public ProductSelled showProdductSelled(int ID) {
+		String sql = "select * from productSelled where ID = " + ID;
+		return jdbcTemplate.queryForObject(sql, new RowmappingProductSelled());
+	}
+
+	@Override
+	public Customer showCustomer(int ID) {
+		String sql = "select * from customer where ID_product = " + ID;
+		return jdbcTemplate.queryForObject(sql, new RowmappingCustomer());
 	}
 	
 	

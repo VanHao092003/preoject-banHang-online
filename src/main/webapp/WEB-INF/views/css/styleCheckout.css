@@ -95,14 +95,14 @@ p{
 {
     color:#030303;
 	width: 100%;
-    padding: 0.5rem;
+    padding: 0.4rem;
     border: none;
     border-bottom: 1.5px solid #ccc;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     border-radius: 0.3rem;
     font-family: 'Roboto', sans-serif;
     color: #615a5a;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-weight: 500;
   outline:none;
 }

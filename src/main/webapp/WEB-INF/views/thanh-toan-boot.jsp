@@ -43,19 +43,19 @@
         		<hr>
         		<div class="leftside_bottom_">
         			<a>Tổng:</a>
-        			<a>${sumMoney_boot}</a>
+        			<a>${sumMoney_boot} Đ</a>
         		</div>
         	</div>
         </div>
         <div class="rightside">
-          <form action="/WebSellingShoes/check_successful">
+          <form action="/WebSellingShoes/check_successful/boot/${ID_boot}">
             <h1>Thông tin thanh toán</h1>
             <p>Mã đơn hàng: </p>
-            <input type="text" class="inputbox" name="ID_customer" value="${randomInt}" required />
+            <input type="text" class="inputbox" name="ID_product" value="${ID_product}" required />
             <input type="text" class="inputbox" name="name_customer" placeholder="Tên người nhận" required />
             <input type="text" class="inputbox" name="address_customer" placeholder="Địa chỉ nhận hàng" required />
             <input type="text" class="inputbox" name="phone_customer" placeholder="Số điện thoại" required />
-            <input type="hidden" name="ID_product" value="${productSelled.ID}" required />
+            <input type="hidden" name="ID_customer" value="${randomInt}" required />
 			<p style="color: black;">Phương thức thanh toán: Khi nhận hàng và kiểm tra</p>
 			<p style="color: black;">Ngày nhận hàng: 5 ngày kể từ ngày mua.</p>
             <p></p>
