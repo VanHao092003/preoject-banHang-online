@@ -40,6 +40,10 @@
         			<a>Số lượng:</a>
         			<a>${productSelled_shoes.quantity}</a>
         		</div>
+        		<div class="leftside_bottom_">
+        			<a>Vận chuyển:</a>
+        			<a>0 Đ</a>
+        		</div>
         		<hr>
         		<div class="leftside_bottom_">
         			<a>Tổng:</a>

@@ -233,4 +233,9 @@ public class Controller {
         }
         return SumMoney;
 	}
+	
+	@RequestMapping(value="/xem")
+	public String xem(HttpServletRequest httpServletRequest) {
+		return "successful";
+	}
 }

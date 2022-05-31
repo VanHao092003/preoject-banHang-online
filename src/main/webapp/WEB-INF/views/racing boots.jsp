@@ -31,7 +31,7 @@
 										<br>SHOES</strong></div>
 							<div class="original_price" > 6.000.000 Đ</div>
                             <div class="number_text"><strong><span style="color: #0a0506">${boot.money} Đ</span></strong></div>
-                            <button class="seemore">Chi tiết</button>
+                            <a href='<c:url value="/boot/detail/${boot.ID}"/>'><button class="seemore">Chi tiết</button></a>
                         </div>
                     </div>
                 </div>
